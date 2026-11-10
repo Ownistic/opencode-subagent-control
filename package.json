@@ -1,7 +1,12 @@
 {
   "name": "opencode-subagents-control",
   "version": "0.1.0",
+  "description": "OpenCode TUI plugin for steering and managing subagent sessions",
   "license": "LGPL-3.0-only",
+  "repository": { "type": "git", "url": "git+https://github.com/Ownistic/opencode-subagent-control.git" },
+  "homepage": "https://github.com/Ownistic/opencode-subagent-control#readme",
+  "bugs": { "url": "https://github.com/Ownistic/opencode-subagent-control/issues" },
+  "keywords": ["opencode", "opencode-plugin", "tui", "subagents"],
   "type": "module",
   "exports": { ".": "./src/index.ts", "./tui": "./src/tui.tsx" },
   "files": ["src", "LICENSE-GPL"],

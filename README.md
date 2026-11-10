@@ -11,26 +11,20 @@ An OpenCode V2 terminal plugin for interacting with subagents from their session
 
 ## Install
 
-The plugin targets the OpenCode V2 plugin API and depends on `@opencode/plugin` 2.2.5. It has been exercised with OpenCode 2.2.5 and 2.2.6. Install Node.js and npm before you start.
+The plugin targets the OpenCode V2 plugin API and depends on `@opencode/plugin` 2.2.5. It has been exercised with OpenCode 2.2.5 and 2.2.6.
 
-1. Clone the repository and install its dependencies:
-
-   ```sh
-   git clone https://github.com/Ownistic/opencode-subagent-control.git
-   cd opencode-subagent-control
-   npm install
-   ```
-
-2. Add the absolute path of the cloned directory to the `plugins` array in your OpenCode configuration. For example:
+Add the package to the `plugins` array in your OpenCode configuration:
 
 ```jsonc
 {
   "$schema": "https://opencode.ai/config.json",
-  "plugins": ["/absolute/path/to/opencode-subagent-control"]
+  "plugins": ["opencode-subagents-control@0.1.0"]
 }
 ```
 
 Keep any existing plugin entries. OpenCode loads the plugin's server and TUI parts together. Use `/reload` if the plugin does not appear after you save the configuration.
+
+To receive the latest published version instead, use `"opencode-subagents-control"` without the version suffix.
 
 ## Use
 
@@ -58,7 +52,7 @@ The child panel shows the selected child's context usage, TODOs, model, and stat
 
 ## Development
 
-Install dependencies with `npm install`, then run `npm run typecheck` and `npm test`. Tests require Bun.
+Clone the repository and install dependencies with `npm install`, then run `npm run typecheck` and `npm test`. Tests require Bun. To load a local checkout, add its absolute directory to the `plugins` array instead of the package name.
 
 ## License
 
