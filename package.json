@@ -1,17 +1,41 @@
 {
   "name": "opencode-subagents-control",
-  "version": "0.1.0",
+  "version": "0.1.1-rc.0",
   "description": "OpenCode TUI plugin for steering and managing subagent sessions",
   "license": "LGPL-3.0-only",
-  "repository": { "type": "git", "url": "git+https://github.com/Ownistic/opencode-subagent-control.git" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ownistic/opencode-subagent-control.git"
+  },
   "homepage": "https://github.com/Ownistic/opencode-subagent-control#readme",
-  "bugs": { "url": "https://github.com/Ownistic/opencode-subagent-control/issues" },
-  "keywords": ["opencode", "opencode-plugin", "tui", "subagents"],
+  "bugs": {
+    "url": "https://github.com/Ownistic/opencode-subagent-control/issues"
+  },
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "tui",
+    "subagents"
+  ],
   "type": "module",
-  "exports": { ".": "./src/index.ts", "./tui": "./dist/tui.js" },
-  "files": ["src", "dist", "LICENSE-GPL"],
-  "scripts": { "build": "bun run scripts/build.ts", "prepack": "bun run build", "typecheck": "tsc --noEmit", "test": "bun test" },
-  "dependencies": { "@opencode/plugin": "2.2.5" },
+  "exports": {
+    ".": "./src/index.ts",
+    "./tui": "./dist/tui.js"
+  },
+  "files": [
+    "src",
+    "dist",
+    "LICENSE-GPL"
+  ],
+  "scripts": {
+    "build": "bun run scripts/build.ts",
+    "prepack": "bun run build",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@opencode/plugin": "2.2.5"
+  },
   "devDependencies": {
     "@opentui/core": "^0.8.0",
     "@opentui/solid": "^0.8.0",
@@ -19,5 +43,12 @@
     "solid-js": "^1.9.0",
     "typescript": "^5.9.0"
   },
-  "peerDependencies": { "@opentui/core": ">=0.8.0", "@opentui/solid": ">=0.8.0", "solid-js": ">=1.9.0" }
+  "peerDependencies": {
+    "@opentui/core": ">=0.8.0",
+    "@opentui/solid": ">=0.8.0",
+    "solid-js": ">=1.9.0"
+  },
+  "publishConfig": {
+    "tag": "next"
+  }
 }
