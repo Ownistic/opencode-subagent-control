@@ -38,6 +38,8 @@ Open a subagent in OpenCode's **Subagents** view. The plugin focuses its prompt 
 
 The plugin prompt is not OpenCode's native prompt: it does not support attachments, file or agent mentions, or general TUI-only slash commands. The model picker and server commands are provided by OpenCode and availability depends on the connected server.
 
+The subagent model picker groups available models by favorites, recent models, and provider. It reads OpenCode's local model preferences but does not change them. The preferences file is an internal OpenCode format, so favorites can be unavailable with other versions or environments.
+
 Open a session and select a command from the **Subagents** group in the command palette, or use a slash command:
 
 | Command | Action |

@@ -1,4 +1,5 @@
 import type { Context } from "@opencode/plugin/tui/context"
+import { modelOptions, readModelPreferences } from "./model-options"
 
 type Client = Context["client"]
 
@@ -69,9 +70,10 @@ export function controls(context: Context) {
       const session = await context.client.session.get({ sessionID })
       const models = (await context.client.model.list({ location: { directory: session.location.directory }, types: ["chat"] })).data
         .filter((model) => model.enabled && (!model.type || model.type === "chat"))
+      const preferences = await readModelPreferences()
       const selected = await context.ui.dialog.select({
-        title: "Select subagent model",
-        options: models.map((model) => ({ title: model.name, description: `${model.providerID}/${model.id}`, value: model })),
+        title: "Select model",
+        options: modelOptions(models, preferences),
       })
       if (!selected) return
       const variant = selected.variants.length ? await context.ui.dialog.select({
