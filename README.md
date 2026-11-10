@@ -52,7 +52,7 @@ The child panel shows the selected child's context usage, TODOs, model, and stat
 
 ## Development
 
-Clone the repository and install dependencies with `npm install`, then run `npm run typecheck` and `npm test`. Tests require Bun. To load a local checkout, add its absolute directory to the `plugins` array instead of the package name.
+Clone the repository and install dependencies with `npm install`, then run `npm run typecheck` and `npm test`. Tests require Bun. Run `npm run build` after changing the TUI source to rebuild the packaged entry point. To load a local checkout, add its absolute directory to the `plugins` array instead of the package name.
 
 ## License
 

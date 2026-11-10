@@ -8,9 +8,9 @@
   "bugs": { "url": "https://github.com/Ownistic/opencode-subagent-control/issues" },
   "keywords": ["opencode", "opencode-plugin", "tui", "subagents"],
   "type": "module",
-  "exports": { ".": "./src/index.ts", "./tui": "./src/tui.tsx" },
-  "files": ["src", "LICENSE-GPL"],
-  "scripts": { "typecheck": "tsc --noEmit", "test": "bun test" },
+  "exports": { ".": "./src/index.ts", "./tui": "./dist/tui.js" },
+  "files": ["src", "dist", "LICENSE-GPL"],
+  "scripts": { "build": "bun run scripts/build.ts", "prepack": "bun run build", "typecheck": "tsc --noEmit", "test": "bun test" },
   "dependencies": { "@opencode/plugin": "2.2.5" },
   "devDependencies": {
     "@opentui/core": "^0.8.0",
