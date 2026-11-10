@@ -109,7 +109,7 @@ function ChildInput(props: { sessionID: string }) {
           />
           <box flexDirection="row" paddingTop={1} gap={1} minWidth={0}>
             <text fg={context.theme.text.base} wrapMode="none" truncate><b>{session()?.agent ?? "Subagent"}</b></text>
-            <text fg={context.theme.text.muted} flexShrink={1} wrapMode="none" truncate onMouseDown={() => { void controls(context).model(props.sessionID) }}>{modelLabel()}</text>
+            <text fg={context.theme.text.muted} flexShrink={1} wrapMode="none" truncate onMouseUp={(event) => { if (event.button !== 0) return; event.stopPropagation(); void controls(context).model(props.sessionID) }}>{modelLabel()}</text>
           </box>
         </box>
       </box>
